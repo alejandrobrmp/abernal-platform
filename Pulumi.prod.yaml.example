@@ -1,0 +1,22 @@
+# Example configuration for production stack
+# Create this file when you run: pulumi stack init prod
+
+config:
+  # Kubernetes configuration
+  kubernetes:kubeconfig: ~/.kube/config-prod
+  kubernetes:context: production
+  
+  # Platform configuration
+  abernal-platform:namespace: abernal-platform
+  
+  # ArgoCD configuration
+  abernal-platform:argocd.enabled: true
+  abernal-platform:argocd.namespace: argocd
+  abernal-platform:argocd.version: v2.12.3
+  
+  # Verdaccio configuration
+  abernal-platform:verdaccio.enabled: true
+  abernal-platform:verdaccio.namespace: abernal-platform
+  abernal-platform:verdaccio.version: 5.31.1
+  abernal-platform:verdaccio.storage.size: 50Gi
+  abernal-platform:verdaccio.storage.storageClass: fast-ssd

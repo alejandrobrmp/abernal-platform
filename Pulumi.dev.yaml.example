@@ -1,0 +1,22 @@
+# Example configuration for dev stack
+# Copy this file to Pulumi.dev.yaml and adjust values as needed
+
+config:
+  # Kubernetes configuration
+  kubernetes:kubeconfig: ~/.kube/config  # Path to your kubeconfig file
+  kubernetes:context: default            # Kubernetes context to use
+  
+  # Platform configuration
+  abernal-platform:namespace: abernal-platform
+  
+  # ArgoCD configuration
+  abernal-platform:argocd.enabled: true
+  abernal-platform:argocd.namespace: argocd
+  abernal-platform:argocd.version: v2.12.3
+  
+  # Verdaccio configuration
+  abernal-platform:verdaccio.enabled: true
+  abernal-platform:verdaccio.namespace: abernal-platform
+  abernal-platform:verdaccio.version: 5.31.1
+  abernal-platform:verdaccio.storage.size: 10Gi
+  abernal-platform:verdaccio.storage.storageClass: local-path

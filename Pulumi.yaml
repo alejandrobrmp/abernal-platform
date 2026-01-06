@@ -1,0 +1,6 @@
+name: abernal-platform
+runtime:
+  name: nodejs
+  options:
+    typescript: true
+description: Platform services configuration for Kubernetes (k3s) using Pulumi
